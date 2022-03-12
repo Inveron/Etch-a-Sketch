@@ -1,39 +1,48 @@
-const container = document.querySelector("#squares");
 
+
+const container = document.querySelector("#squares");
 document.body.style.backgroundColor = "red";
 
-function newSquare(size) {
+let sqsize = 255;
+
+function button2() {
+    location.reload();
+}
+
+
+function button() {
+    
+    
+    let size = prompt("What should the side length be?");
+
     if (size <= 100) {
-        return size*size - 1;
+        sqsize =  size*size - 1;
     }
 
     else {
         alert("Size too big, defaulting to 16x16");
-        return 255;
+        sqsize = 255;
     }
+
+    
 }
 
+button()
 
-
-for (let i = 0; i <= 255; i++) {
+for (let i = 0; i <= sqsize; i++) {
     
 
     let div  = document.createElement('div');
     
-    div.setAttribute('style', 'display: grid; margin-right: 0px; gap: 0; width: 60%; height: 0; padding-top: 60%; margin: 10px; background-color: white; justify-content: center;')
+    div.setAttribute('style', 'display: grid; margin: 0%; gap: 0; width: 75%; height: 0; padding-top: 75%; background-color: white; justify-content: center; margin-bottom: 20%')
     div.classList.add("sq");
-    //div.textContent = "test";
     div.addEventListener('mouseenter', () => {
         div.style.backgroundColor = "black";
-        console.log("test");
+        
     });
-
-    
-    
-    
     container.appendChild(div)
     
 }
 
+container.setAttribute('style', 'display: grid; grid-template-columns: repeat(' + Math.sqrt(sqsize+1) +', 0.5fr); width: 40%; height: 40%; justfiy-content: center')
 
-container.setAttribute('style', 'display: grid; grid-template-columns: repeat(16, 0.5fr); width: 75%; justfiy-content: center')
