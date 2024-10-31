@@ -1,0 +1,54 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: gray;
+}
+
+#settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    
+
+}
+
+#board {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin: 5%;
+    padding: 2%;
+    background-color: aqua;
+    flex-direction: column;
+    flex-basis: 50px;
+    flex-wrap: wrap;
+    
+    
+    justify-self: center;
+    align-items: center;
+}
+
+.square {
+    display: flex;
+    background-color: gray;
+
+    
+}
+
+.column {
+    width: fit-content;
+}
+
+.buttons {
+
+}
