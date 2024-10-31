@@ -25,7 +25,7 @@ function createSquare(size) {
         div.style.backgroundColor = "black";
     });
     clearButton.addEventListener("click", () => {
-        div.style.backgroundColor = "gray";
+        div.style.backgroundColor = "#e1e8eb";
     });
     
     return div;
